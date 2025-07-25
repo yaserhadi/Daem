@@ -1,0 +1,11 @@
+{
+    "name": "IncidentManagement",
+    "alias": "incidentmanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\IncidentManagement\\Providers\\IncidentManagementServiceProvider"
+    ],
+    "files": []
+}
