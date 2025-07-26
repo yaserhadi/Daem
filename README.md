@@ -21,6 +21,22 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Authorization
+
+This project uses [spatie/laravel-permission](https://github.com/spatie/laravel-permission) for role and permission management.
+
+After installing dependencies run the migrations and seeders to create default roles and permissions:
+
+```bash
+php artisan migrate --force
+php artisan db:seed --force
+```
+
+Two sample routes demonstrate middleware protection:
+
+- `/incidents` &ndash; requires the `view incidents` permission.
+- `/manage-incidents` &ndash; requires the `admin` role.
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.

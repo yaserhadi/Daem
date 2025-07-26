@@ -22,3 +22,13 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/incidents', function () {
+        return 'Incident list';
+    })->middleware('permission:view incidents');
+
+    Route::get('/manage-incidents', function () {
+        return 'Manage incidents';
+    })->middleware('role:admin');
+});
