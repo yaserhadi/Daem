@@ -21,6 +21,11 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    // Serve the Vue Vben Admin panel
+    Route::get('/admin/{any?}', function () {
+        return view('admin');
+    })->where('any', '.*');
 });
 
 Route::middleware(['auth'])->group(function () {
